@@ -10,13 +10,16 @@
 #import "Event.h"
 #import <MacRuby/MacRuby.h>
 
+@interface NSObject (RubyMethods)
+-(Event*)onEvent:(Event*)event;
+@end
+
 @implementation EventTap
--(id)initForEventTypes:(NSArray*)eventTypes {
+-(id)init {
 	[super init];
-	[self retain];
 	CFMachPortRef tap = CGEventTapCreate(kCGHIDEventTap,
 										 kCGHeadInsertEventTap,
-										 kCGEventTapOptionListenOnly,
+										 kCGEventTapOptionDefault,
 										 CGEventMaskBit(kCGEventKeyDown) | CGEventMaskBit(kCGEventKeyUp) | CGEventMaskBit(kCGEventFlagsChanged),
 										 &eventCallback,
 										 self);
@@ -26,25 +29,13 @@
 	return self;
 }
 
--(CGEventRef)onEvent:(CGEventRef)event fromProxy:(CGEventTapProxy)proxy ofType:(CGEventType)type {
-	if (delegate != NULL) {
-		[delegate onEvent:[[Event alloc] initWithEventRef:event	tapProxy:proxy type:type]];
-		return event;
-	} else {
-		return event;
-	}
-}
-
--(void)setDelegate:(id)aDelegate {
-	[[NSGarbageCollector defaultCollector] disableCollectorForPointer:aDelegate];
-	delegate = aDelegate;
+-(Event*)handleEvent:(Event*)event {
+	// to be overridden by ruby code
+	return event;
 }
 
 @end
 
-CGEventRef eventCallback(CGEventTapProxy proxy, 
-						 CGEventType type, 
-						 CGEventRef event, 
-						 void *eventTapObject) {
-	return [((id) eventTapObject) onEvent:event fromProxy:proxy ofType:type];
+CGEventRef eventCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *eventTapObject) {
+	return [((id) eventTapObject) handleEvent:[[Event alloc] initWithEventRef:event	tapProxy:proxy type:type]].eventRef;
 }

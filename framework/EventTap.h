@@ -7,14 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+@class Event;
 
 @interface EventTap : NSObject {
 	id delegate;
 }
--(id)initForEventTypes:(NSArray*)eventTypes;
--(void)setDelegate:(id)delegate;
--(CGEventRef)onEvent:(CGEventRef)event fromProxy:(CGEventTapProxy)proxy ofType:(CGEventType)type;
+-(id)init;
+-(Event*)handleEvent:(Event*)event;
 @end
 
 CGEventRef eventCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *eventTapObject);
