@@ -26,4 +26,8 @@ class Event
   def get_flags
     CGEventGetFlags(eventRef)  
   end
+
+  def set_flags(flags)
+    CGEventSetFlags(eventRef, flags)
+  end
 end

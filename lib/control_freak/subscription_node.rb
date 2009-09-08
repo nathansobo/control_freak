@@ -1,5 +1,4 @@
 class SubscriptionNode
-
   attr_reader :subscriptions
   def initialize
     @subscriptions = []

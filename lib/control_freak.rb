@@ -17,17 +17,18 @@ end
 require 'hotcocoa'
 include HotCocoa
 application do
-  @tap = EventTap.new
-  @xkeys = XkeysPedal.new
-
-  @xkeys.left_flags = KCGEventFlagMaskAlternate
-  @xkeys.middle_flags = KCGEventFlagMaskControl
-  @xkeys.right_flags = KCGEventFlagMaskCommand
-
-  @tap.on_event do |event|
-    puts_binary(@xkeys.active_flags)
-    event
+  @keyboards = DDHidKeyboard.allKeyboards
+  @keyboards.each do |kb|
+    kb.track_modifier_keys
   end
 
+  @tap = EventTap.new
+  @tap.on_event do |event|
+    combined_flags = @keyboards.inject(DDHidKeyboard::NO_FLAGS_MASK) do |mask, kb|
+      mask | kb.flags
+    end
+    event.set_flags(event.get_flags | combined_flags)
+    event
+  end
 end
 

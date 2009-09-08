@@ -43,7 +43,6 @@ class XkeysPedal
 
   def right_flags=(flags)
     on_right_down do
-      p "right"
       @active_right_flags = flags
     end
 
