@@ -10,15 +10,13 @@
 
 @implementation Event
 
--(id)initWithEventRef:(CGEventRef)anEventRef tapProxy:(CGEventTapProxy)aTapProxy type:(CGEventType)aType {
+@synthesize eventRef;
+
+-(id)initWithEventRef:(CGEventRef)anEventRef {
 	eventRef = anEventRef;
-	tapProxy = aTapProxy;
-	type = aType;
 	return self;
 }
 
-@synthesize eventRef;
-@synthesize tapProxy;
-@synthesize type;
+
 
 @end

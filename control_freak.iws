@@ -2,13 +2,54 @@
 <project relativePaths="false" version="4">
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/control_freak.iws" afterPath="$PROJECT_DIR$/control_freak.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/control_freak/subscription_node.rb" afterPath="$PROJECT_DIR$/lib/control_freak/subscription_node.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/control_freak/xkeys_pedal.rb" afterPath="$PROJECT_DIR$/lib/control_freak/xkeys_pedal.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/control_freak/ddhid_keyboard.rb" afterPath="$PROJECT_DIR$/lib/control_freak/ddhid_keyboard.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/control_freak.rb" afterPath="$PROJECT_DIR$/lib/control_freak.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DDHidLib.framework/Versions/A/DDHidLib" afterPath="$PROJECT_DIR$/DDHidLib.framework/Versions/A/DDHidLib" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Headers/DDHidAppleRemote.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Headers/DDHidKeyboardBarcodeScanner.h" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/control_freak/event.rb" afterPath="$PROJECT_DIR$/lib/control_freak/event.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Versions/Current/Headers/DDHidElement.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Versions/Current/Headers/DDHidJoystick.h" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/Event.m" afterPath="$PROJECT_DIR$/framework/Event.m" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Versions/Current/Resources/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Headers/DDHidEvent.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Versions/Current/Headers/DDHidQueue.h" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/control_freak.rb" afterPath="$PROJECT_DIR$/lib/control_freak.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Headers/DDHidUsageTables.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ControlFreak.framework/Versions/Current" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Headers/DDHidKeyboard.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ControlFreak.framework/Versions/A/Resources/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Resources/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ControlFreak.framework/Versions/A/Resources/English.lproj/InfoPlist.strings" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/ControlFreak.xcodeproj/grockit.mode1v3" afterPath="$PROJECT_DIR$/framework/ControlFreak.xcodeproj/grockit.mode1v3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/control_freak.iws" afterPath="$PROJECT_DIR$/control_freak.iws" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Versions/Current/Headers/DDHidKeyboardBarcodeScanner.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Versions/Current/Headers/DDHidKeyboard.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ControlFreak.framework/Resources" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/ControlFreak.xcodeproj/grockit.pbxuser" afterPath="$PROJECT_DIR$/framework/ControlFreak.xcodeproj/grockit.pbxuser" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Headers/DDHidMouse.h" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/Event.h" afterPath="$PROJECT_DIR$/framework/Event.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/EventTap.m" afterPath="$PROJECT_DIR$/framework/EventTap.m" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Headers/DDHidElement.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Versions/Current/Headers/DDHidAppleRemote.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ControlFreak.framework/ControlFreak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Headers/DDHidUsage.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Versions/Current/Headers/DDHidMouse.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Versions/Current/Headers/DDHidLib.h" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flag_tracking_crap.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/control_freak/event_tap.rb" afterPath="$PROJECT_DIR$/lib/control_freak/event_tap.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Resources/DDHidStandardUsages.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Versions/Current/Headers/DDHidDevice.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Headers/DDHidQueue.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Versions/Current/Headers/DDHidEvent.h" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/EventTap.h" afterPath="$PROJECT_DIR$/framework/EventTap.h" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Headers/DDHidLib.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Versions/Current/Resources/DDHidStandardUsages.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Headers/DDHidDevice.h" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/control_freak/ddhid_keyboard.rb" afterPath="$PROJECT_DIR$/lib/control_freak/ddhid_keyboard.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Versions/Current/Headers/DDHidUsage.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Versions/Current/DDHidLib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ControlFreak.framework/Versions/A/ControlFreak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Versions/Current/Headers/DDHidUsageTables.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Headers/DDHidJoystick.h" afterPath="" />
     </list>
     <ignored path="control_freak.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,19 +103,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="control_freak.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="control_freak.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/control_freak.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0">
+            <state line="146" column="0" selection-start="3243" selection-end="3243" vertical-scroll-proportion="1.6510489">
+              <folding>
+                <marker date="1252718789000" expanded="true" signature="1936:2005" placeholder=" ... end" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="event_tap.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/control_freak/event_tap.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="5" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ddhid_keyboard.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="event.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/control_freak/event.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="12" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ddhid_keyboard.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/control_freak/ddhid_keyboard.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="15" selection-start="1239" selection-end="1239" vertical-scroll-proportion="0.06993007">
+            <state line="8" column="29" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="flag_tracking_crap.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flag_tracking_crap.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="6" selection-start="874" selection-end="893" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -83,7 +153,7 @@
       <file leaf-file-name="xkeys_pedal.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/control_freak/xkeys_pedal.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="2" selection-start="768" selection-end="768" vertical-scroll-proportion="-22.56">
+            <state line="25" column="2" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -297,12 +367,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="22" width="2560" height="1574" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Dataflow to this" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24970132" sideWeight="0.66643786" order="0" side_tool="false" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24970132" sideWeight="0.66643786" order="0" side_tool="false" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32815665" sideWeight="0.5" order="1" side_tool="false" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" />
@@ -352,38 +422,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/control_freak/event.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="22" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/control_freak/event_tap.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="20" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/control_freak/xkeys_pedal.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="2" selection-start="768" selection-end="768" vertical-scroll-proportion="-22.56">
+        <state line="25" column="2" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/control_freak.rb">
+    <entry file="file://$PROJECT_DIR$/flag_tracking_crap.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0">
+        <state line="45" column="6" selection-start="874" selection-end="893" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/control_freak/ddhid_keyboard.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="15" selection-start="1239" selection-end="1239" vertical-scroll-proportion="0.06993007">
+        <state line="8" column="29" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/control_freak/event.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="12" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/control_freak/event_tap.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="5" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/control_freak.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="0" selection-start="3243" selection-end="3243" vertical-scroll-proportion="1.6510489">
+          <folding>
+            <marker date="1252718789000" expanded="true" signature="1936:2005" placeholder=" ... end" />
+          </folding>
         </state>
       </provider>
     </entry>

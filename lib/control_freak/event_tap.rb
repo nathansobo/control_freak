@@ -1,6 +1,6 @@
 class EventTap
   def handleEvent(event)
-    event_node.publish(event)
+    event_node.publish(event) || event
   end
 
   def on_event(&proc)
@@ -11,7 +11,7 @@ class EventTap
     @event_node ||= SubscriptionNode.new
   end
 
-  def combined_flags_state
-    CGEventSourceFlagsState(KCGEventSourceStateHIDSystemState)
+  def ready?
+    !eventTapProxy.nil?
   end
 end

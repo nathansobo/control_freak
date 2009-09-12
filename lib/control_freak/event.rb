@@ -3,11 +3,19 @@ class Event
     CGEventSetSource(eventRef, source)
   end
 
+  def type
+    CGEventGetType(eventRef)
+  end
+
+  def key_down?
+    type == KCGEventKeyDown
+  end
+
   def set_keycode(code)
     set_integer_value_field(KCGKeyboardEventKeycode, code)
   end
 
-  def keycode
+  def key_code
     get_integer_value_field(KCGKeyboardEventKeycode)
   end
 
@@ -23,11 +31,11 @@ class Event
     CGEventGetIntegerValueField(eventRef, KCGEventSourceUnixProcessID)
   end
 
-  def get_flags
+  def flags
     CGEventGetFlags(eventRef)  
   end
 
-  def set_flags(flags)
+  def flags=(flags)
     CGEventSetFlags(eventRef, flags)
   end
 end

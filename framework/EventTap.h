@@ -11,9 +11,14 @@
 
 @interface EventTap : NSObject {
 	id delegate;
+	CGEventTapProxy eventTapProxy;
 }
 -(id)init;
 -(Event*)handleEvent:(Event*)event;
+
+@property CGEventTapProxy eventTapProxy;
 @end
+
+
 
 CGEventRef eventCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *eventTapObject);

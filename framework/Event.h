@@ -11,14 +11,10 @@
 
 @interface Event : NSObject {
 	CGEventRef eventRef;
-	CGEventTapProxy tapProxy;
-	CGEventType type;
 }
 
 @property CGEventRef eventRef;
-@property CGEventTapProxy tapProxy;
-@property CGEventType type;
 
--(id)initWithEventRef:(CGEventRef)eventRef tapProxy:(CGEventTapProxy)tapProxy type:(CGEventType)type;
+-(id)initWithEventRef:(CGEventRef)eventRef;
 
 @end

@@ -8,24 +8,25 @@
 
 #import "EventTap.h"
 #import "Event.h"
-#import <MacRuby/MacRuby.h>
 
 @interface NSObject (RubyMethods)
 -(Event*)onEvent:(Event*)event;
 @end
 
 @implementation EventTap
+@synthesize eventTapProxy;
+
 -(id)init {
 	[super init];
+	eventTapProxy = NULL;
 	CFMachPortRef tap = CGEventTapCreate(kCGHIDEventTap,
 										 kCGHeadInsertEventTap,
 										 kCGEventTapOptionDefault,
-										 CGEventMaskBit(kCGEventKeyDown) | CGEventMaskBit(kCGEventKeyUp) | CGEventMaskBit(kCGEventFlagsChanged),
+										 kCGEventMaskForAllEvents,
 										 &eventCallback,
 										 self);
 	CFRunLoopSourceRef tapSource = CFMachPortCreateRunLoopSource(NULL, tap, 0);
 	CFRunLoopAddSource((CFRunLoopRef) [[NSRunLoop currentRunLoop] getCFRunLoop], tapSource, kCFRunLoopCommonModes);
-	
 	return self;
 }
 
@@ -34,8 +35,15 @@
 	return event;
 }
 
+-(void)postEvent:(Event*)event {
+	if (eventTapProxy != NULL) {
+		CGEventTapPostEvent(eventTapProxy, event.eventRef);	
+	}
+}
 @end
 
-CGEventRef eventCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *eventTapObject) {
-	return [((id) eventTapObject) handleEvent:[[Event alloc] initWithEventRef:event	tapProxy:proxy type:type]].eventRef;
+CGEventRef eventCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *eventTapObj) {
+	EventTap *eventTapObject = (EventTap*) eventTapObj;
+	if ([eventTapObject eventTapProxy] == NULL) [eventTapObject setEventTapProxy:proxy];
+	return [eventTapObject handleEvent:[[Event alloc] initWithEventRef:event]].eventRef;
 }
