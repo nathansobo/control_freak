@@ -11,8 +11,8 @@ class Event
     type == KCGEventKeyDown
   end
 
-  def set_keycode(code)
-    set_integer_value_field(KCGKeyboardEventKeycode, code)
+  def key_code=(key_code)
+    set_integer_value_field(KCGKeyboardEventKeycode, key_code)
   end
 
   def key_code

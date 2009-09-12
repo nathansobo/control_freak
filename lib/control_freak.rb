@@ -15,20 +15,42 @@ end
 
 require 'hotcocoa'
 
+module HasEventTransformers
+  def add_transformer(transformer)
+    transformers.push(transformer)
+  end
+
+  def transformers
+    @transformers ||= []
+  end
+
+  def transform(event)
+    transformers.inject(event) do |event, transformer|
+      transformer.key_down(event) if event
+    end
+  end
+end
+
 class PhysicalKeyboard
+  include HasEventTransformers
+
   def self.all
     DDHidKeyboard.allKeyboards.map do |hid_keyboard|
       PhysicalKeyboard.new(hid_keyboard)
     end
   end
 
-  attr_reader :hid_keyboard, :key_down_node, :key_up_node
+  attr_reader :hid_keyboard, :key_down_node, :key_up_node, :on_next_input_handler
 
   def initialize(hid_keyboard)
     @hid_keyboard = hid_keyboard
     hid_keyboard.delegate = self
     @key_down_node = SubscriptionNode.new
     @key_up_node = SubscriptionNode.new
+  end
+
+  def on_next_input(&proc)
+    @on_next_input_handler = proc
   end
 
   def listen
@@ -41,11 +63,23 @@ class PhysicalKeyboard
   end
 
   def key_down(code)
-    key_down_node.publish(KeyboardEvent.alloc.initWithHIDUsageCode(code, keyDown:true))
+    if on_next_input_handler
+      on_next_input_handler.call
+      @on_next_input_handler = nil
+    end
+    event = KeyboardEvent.alloc.initWithHIDUsageCode(code, keyDown:true)
+    transformed_event = transform(event)
+    key_down_node.publish(transformed_event) if transformed_event
   end
 
   def key_up(code)
-    key_up_node.publish(KeyboardEvent.alloc.initWithHIDUsageCode(code, keyDown:false))
+    if on_next_input_handler
+      on_next_input_handler.call
+      @on_next_input_handler = nil
+    end
+    event = KeyboardEvent.alloc.initWithHIDUsageCode(code, keyDown:false)
+    transformed_event = transform(event)
+    key_up_node.publish(transformed_event) if transformed_event
   end
 
   def on_key_down(&proc)
@@ -58,6 +92,8 @@ class PhysicalKeyboard
 end
 
 class VirtualKeyboard
+  include HasEventTransformers
+
   attr_reader :input_keyboards, :event_tap, :transformers
 
   def initialize(input_keyboards)
@@ -77,14 +113,8 @@ class VirtualKeyboard
     end
   end
 
-  def add_transformer(transformer)
-    transformers.push(transformer)
-  end
-
   def key_down(event)
-    transformed_event = transformers.inject(event) do |event, transformer|
-      transformer.key_down(event) if event
-    end
+    transformed_event = transform(event)
     event_tap.postEvent(transformed_event) if transformed_event
   end
 
@@ -97,7 +127,7 @@ class VirtualKeyboard
   end
 end
 
-class FlagFuser
+class FlagTracker
   LeftControl = 59
   RightControl = 62
   CapsLock = 57
@@ -125,22 +155,18 @@ class FlagFuser
   def key_down(event)
     case event.key_code
       when LeftControl, RightControl, CapsLock
-        puts "control"
         @control_flags = KCGEventFlagMaskControl
         nil
       when LeftShift, RightShift
-        puts "shift"
         @shift_flags = KCGEventFlagMaskShift
         nil
       when LeftAlt, RightAlt
-        puts "shift"
         @alt_flags = KCGEventFlagMaskAlternate
         nil
       when LeftCommand, RightCommand
         @command_flags = KCGEventFlagMaskCommand
         nil
       else
-        puts_binary(flags)
         event.flags = flags
         event
     end
@@ -171,10 +197,66 @@ class FlagFuser
   end
 end
 
+class KeyRemapper
+  attr_reader :mapping
+
+  def initialize(mapping)
+    @mapping = mapping
+  end
+
+  def key_down(event)
+    remap(event)
+  end
+
+  def key_up(event)
+    remap(event)
+  end
+
+  def remap(event)
+    if remapped_key_code = mapping[event.key_code]
+      event.key_code = remapped_key_code
+    end
+    event
+  end
+end
+
+class KeyCodePrinter
+  def key_down(event)
+    p event.key_code
+    event
+  end
+
+  def key_up(event)
+    event
+  end
+end
+
+class DoubleKeyboard
+  attr_reader :physical_keyboards, :virtual_keyboard, :left_keyboard
+
+  def initialize
+    @physical_keyboards = PhysicalKeyboard.all
+
+    physical_keyboards.each do |keyboard|
+      keyboard.on_next_input do
+        self.left_keyboard ||= keyboard
+      end
+    end
+
+    @virtual_keyboard = VirtualKeyboard.new(@physical_keyboards)
+    @virtual_keyboard.add_transformer(FlagTracker.new)
+  end
+
+  def left_keyboard=(left_keyboard)
+    @left_keyboard = left_keyboard
+    left_keyboard.add_transformer(KeyRemapper.new(49 => 59))
+    left_keyboard.add_transformer(KeyCodePrinter.new)
+  end
+end
+
 
 include HotCocoa
 application do
-  @virtual_keyboard = VirtualKeyboard.new(PhysicalKeyboard.all)
-  @virtual_keyboard.add_transformer(FlagFuser.new)
+  @double_keyboard = DoubleKeyboard.new
 end
 

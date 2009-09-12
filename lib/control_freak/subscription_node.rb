@@ -8,6 +8,10 @@ class SubscriptionNode
     subscriptions.push(proc)
   end
 
+  def unsubscribe(proc)
+    subscriptions.remove(proc)
+  end
+
   def publish(val)
     retval = nil
     subscriptions.each do |subscription|

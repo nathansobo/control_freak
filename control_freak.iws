@@ -29,6 +29,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/Event.h" afterPath="$PROJECT_DIR$/framework/Event.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/EventTap.m" afterPath="$PROJECT_DIR$/framework/EventTap.m" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Headers/DDHidElement.h" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/control_freak/subscription_node.rb" afterPath="$PROJECT_DIR$/lib/control_freak/subscription_node.rb" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Versions/Current/Headers/DDHidAppleRemote.h" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/ControlFreak.framework/ControlFreak" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/DDHidLib.framework/Headers/DDHidUsage.h" afterPath="" />
@@ -106,10 +107,19 @@
       <file leaf-file-name="control_freak.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/control_freak.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="146" column="0" selection-start="3243" selection-end="3243" vertical-scroll-proportion="1.6510489">
+            <state line="251" column="4" selection-start="5348" selection-end="5348" vertical-scroll-proportion="0.85384613">
               <folding>
-                <marker date="1252718789000" expanded="true" signature="1936:2005" placeholder=" ... end" />
+                <marker date="1252721114000" expanded="true" signature="2620:2689" placeholder=" ... end" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="subscription_node.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/control_freak/subscription_node.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="24" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,7 +136,7 @@
       <file leaf-file-name="event.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/control_freak/event.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="12" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0">
+            <state line="14" column="61" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -415,37 +425,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/control_freak/subscription_node.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/control_freak/xkeys_pedal.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="2" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flag_tracking_crap.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="6" selection-start="874" selection-end="893" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/control_freak/ddhid_keyboard.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="29" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/control_freak/event.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="12" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0">
+        <state line="14" column="61" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -457,11 +439,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/control_freak/subscription_node.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="24" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/control_freak/ddhid_keyboard.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="29" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flag_tracking_crap.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="6" selection-start="874" selection-end="893" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/control_freak/xkeys_pedal.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="2" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/control_freak.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="0" selection-start="3243" selection-end="3243" vertical-scroll-proportion="1.6510489">
+        <state line="251" column="4" selection-start="5348" selection-end="5348" vertical-scroll-proportion="0.85384613">
           <folding>
-            <marker date="1252718789000" expanded="true" signature="1936:2005" placeholder=" ... end" />
+            <marker date="1252721114000" expanded="true" signature="2620:2689" placeholder=" ... end" />
           </folding>
         </state>
       </provider>
