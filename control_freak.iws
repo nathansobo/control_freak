@@ -107,9 +107,9 @@
       <file leaf-file-name="control_freak.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/control_freak.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="251" column="4" selection-start="5348" selection-end="5348" vertical-scroll-proportion="0.85384613">
+            <state line="270" column="74" selection-start="5960" selection-end="5960" vertical-scroll-proportion="0.8937063">
               <folding>
-                <marker date="1252721114000" expanded="true" signature="2620:2689" placeholder=" ... end" />
+                <marker date="1252947290000" expanded="true" signature="2620:2689" placeholder=" ... end" />
               </folding>
             </state>
           </provider>
@@ -469,9 +469,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/control_freak.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="251" column="4" selection-start="5348" selection-end="5348" vertical-scroll-proportion="0.85384613">
+        <state line="270" column="74" selection-start="5960" selection-end="5960" vertical-scroll-proportion="0.8937063">
           <folding>
-            <marker date="1252721114000" expanded="true" signature="2620:2689" placeholder=" ... end" />
+            <marker date="1252947290000" expanded="true" signature="2620:2689" placeholder=" ... end" />
           </folding>
         </state>
       </provider>

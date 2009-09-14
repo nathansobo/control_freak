@@ -200,8 +200,26 @@ end
 class KeyRemapper
   attr_reader :mapping
 
+  VIRTUAL_KEY_CODES = {
+    :space => 49,
+    :control => 59,
+    :caps_lock => 47,
+    :alternate => 58
+  }
+
+
   def initialize(mapping)
-    @mapping = mapping
+    @mapping = convert_to_virtual_key_codes(mapping)
+  end
+
+  def convert_to_virtual_key_codes(mapping)
+    converted_mapping = {}
+    mapping.each do |source, target|
+      source = VIRTUAL_KEY_CODES[source] if source.instance_of?(Symbol)
+      target = VIRTUAL_KEY_CODES[target] if target.instance_of?(Symbol)
+      converted_mapping[source] = target
+    end
+    converted_mapping
   end
 
   def key_down(event)
@@ -249,7 +267,8 @@ class DoubleKeyboard
 
   def left_keyboard=(left_keyboard)
     @left_keyboard = left_keyboard
-    left_keyboard.add_transformer(KeyRemapper.new(49 => 59))
+    left_keyboard.add_transformer(KeyRemapper.new(:space => :control))
+    left_keyboard.add_transformer(KeyRemapper.new(:caps_lock => :alternate))
     left_keyboard.add_transformer(KeyCodePrinter.new)
   end
 end
