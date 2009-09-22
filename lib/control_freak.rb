@@ -5,7 +5,6 @@ framework "ApplicationServices"
 framework "#{dir}/../ControlFreak.framework"
 framework "#{dir}/../DDHidLib.framework"
 require "#{dir}/control_freak/ddhid_keyboard"
-require "#{dir}/control_freak/xkeys_pedal"
 require "#{dir}/control_freak/event_tap"
 require "#{dir}/control_freak/event"
 
