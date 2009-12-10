@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>69DE5FBF1069421800E51B43</string>
+						<string>69DE5FC31069434E00E51B43</string>
 						<key>history</key>
 						<array>
 							<string>69B4D2EE1069413300C77BBF</string>
@@ -566,8 +566,8 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>698838E6105181540022D04C</string>
-		<string>/Users/grockit/workspace/control_freak/framework/ControlFreak.xcodeproj</string>
 		<string>69B4D2E9106940D900C77BBF</string>
+		<string>/Users/grockit/workspace/control_freak/framework/ControlFreak.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>598 270 1516 1079 0 0 2560 1578 </string>
