@@ -15,6 +15,7 @@
 		ECC36BE9104E4B8A00846ACB /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC36BE8104E4B8A00846ACB /* MacRuby.framework */; };
 		ECC36C00104E54D500846ACB /* Event.h in Headers */ = {isa = PBXBuildFile; fileRef = ECC36BFE104E54D500846ACB /* Event.h */; };
 		ECC36C01104E54D500846ACB /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC36BFF104E54D500846ACB /* Event.m */; };
+		ECC36C64114FCDBE00F5FEF0 /* DDHidLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC36C63114FCDBE00F5FEF0 /* DDHidLib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +24,6 @@
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32DBCF5E0370ADEE00C91783 /* ControlFreak_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlFreak_Prefix.pch; sourceTree = "<group>"; };
-		697ED5D31051BD0600E1EF5C /* DDHidLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DDHidLib.framework; path = "../../DDHidLib-1.1/build/Release/DDHidLib.framework"; sourceTree = SOURCE_ROOT; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* ControlFreak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ControlFreak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -33,6 +33,7 @@
 		ECC36BE8104E4B8A00846ACB /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = /Library/Frameworks/MacRuby.framework; sourceTree = "<absolute>"; };
 		ECC36BFE104E54D500846ACB /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		ECC36BFF104E54D500846ACB /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		ECC36C63114FCDBE00F5FEF0 /* DDHidLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DDHidLib.framework; path = ../DDHidLib.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +44,7 @@
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
 				EC6FF350104E2FE3000167A6 /* ApplicationServices.framework in Frameworks */,
 				ECC36BE9104E4B8A00846ACB /* MacRuby.framework in Frameworks */,
+				ECC36C64114FCDBE00F5FEF0 /* DDHidLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +62,6 @@
 		0867D691FE84028FC02AAC07 /* ControlFreak */ = {
 			isa = PBXGroup;
 			children = (
-				697ED5D31051BD0600E1EF5C /* DDHidLib.framework */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
@@ -102,6 +103,7 @@
 		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ECC36C63114FCDBE00F5FEF0 /* DDHidLib.framework */,
 				ECC36BE8104E4B8A00846ACB /* MacRuby.framework */,
 				EC6FF34F104E2FE3000167A6 /* ApplicationServices.framework */,
 				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
@@ -224,6 +226,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../DDHidLib-1.1/build/Release\"",
+					"\"$(SRCROOT)/..\"",
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -250,6 +253,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../DDHidLib-1.1/build/Release\"",
+					"\"$(SRCROOT)/..\"",
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_GC = supported;
@@ -281,10 +285,12 @@
 		1DEB91B308733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;
 			};

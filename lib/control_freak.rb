@@ -13,6 +13,7 @@ def puts_binary(n)
   puts n.to_s(2).rjust(32, '0')
 end
 
+require 'rubygems'
 require 'hotcocoa'
 include HotCocoa
 application do
